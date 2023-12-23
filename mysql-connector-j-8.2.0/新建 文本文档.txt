@@ -1,0 +1,82 @@
+/*表： books*/--------------
+
+/*列信息*/-----------
+
+Field      Type         Collation           Null    Key     Default  Extra           Privileges                       Comment                       
+---------  -----------  ------------------  ------  ------  -------  --------------  -------------------------------  ------------------------------
+id         int          (NULL)              NO      PRI     (NULL)   auto_increment  select,insert,update,references  图书顺序号,主键递增  
+isbn       varchar(15)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+name       varchar(50)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+author     varchar(20)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+publisher  varchar(50)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+price      varchar(15)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+pubDate    varchar(50)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+deposit    varchar(50)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references                                
+quantify   int          (NULL)              NO              (NULL)                   select,insert,update,references                                
+lend       int          (NULL)              NO              (NULL)                   select,insert,update,references                                
+
+/*索引信息*/--------------
+
+
+
+
+
+
+
+
+
+
+/*表： lendrecord*/-------------------
+
+/*列信息*/-----------
+
+Field       Type         Collation           Null    Key     Default  Extra           Privileges                       Comment  
+----------  -----------  ------------------  ------  ------  -------  --------------  -------------------------------  ---------
+id          int          (NULL)              NO      PRI     (NULL)   auto_increment  select,insert,update,references           
+bookId      int          (NULL)              NO              (NULL)                   select,insert,update,references           
+userId      bigint       (NULL)              NO              (NULL)                   select,insert,update,references           
+borrowName  varchar(20)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+borrowDate  varchar(50)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+state       varchar(6)   utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+
+/*索引信息*/--------------
+
+
+
+
+
+
+
+
+
+/*表： returnrecord*/---------------------
+
+/*列信息*/-----------
+
+Field       Type         Collation           Null    Key     Default  Extra           Privileges                       Comment  
+----------  -----------  ------------------  ------  ------  -------  --------------  -------------------------------  ---------
+id          int          (NULL)              NO      PRI     (NULL)   auto_increment  select,insert,update,references           
+boodId      int          (NULL)              NO              (NULL)                   select,insert,update,references           
+userId      bigint       (NULL)              NO              (NULL)                   select,insert,update,references           
+returnName  varchar(20)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+returnDate  varchar(50)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+
+/*索引信息*/--------------
+
+
+
+/*表： user*/-------------
+
+/*列信息*/-----------
+
+Field         Type         Collation           Null    Key     Default  Extra           Privileges                       Comment  
+------------  -----------  ------------------  ------  ------  -------  --------------  -------------------------------  ---------
+id            int          (NULL)              NO      PRI     (NULL)   auto_increment  select,insert,update,references           
+userName      bigint       (NULL)              NO      PRI     (NULL)                   select,insert,update,references           
+setPassword   varchar(15)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+surePassword  varchar(15)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+name          varchar(20)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+sex           varchar(10)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+brithday      varchar(15)  utf8mb4_0900_ai_ci  NO              (NULL)                   select,insert,update,references           
+
+/*索引信息*/--------------
